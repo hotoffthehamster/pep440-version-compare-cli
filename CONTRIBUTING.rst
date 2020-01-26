@@ -125,7 +125,8 @@ for local development.
 
 1. Fork the |pep440-version-compare-cli|_ repo on GitHub.
 
-   * Visit `<https://github.com/hotoffthehamster/pep440-version-compare-cli>`__ and click *Fork*.
+   * Visit `<https://github.com/hotoffthehamster/pep440-version-compare-cli>`__
+     and click *Fork*.
 
 2. Clone your fork locally.
 
@@ -145,7 +146,8 @@ for local development.
     $ mkvirtualenv -a $(pwd) pep440-version-compare-cli
 
    *Note:* We use the ``-a`` option so that ``cdproject`` changes directories
-   to the ``pep440-version-compare-cli/`` directory when we're in the virtual environment.
+   to the ``pep440-version-compare-cli/`` directory when we're in the virtual
+   environment.
 
    Next, set up your fork for local development::
 
@@ -339,7 +341,8 @@ for local development.
    .. _rebase_atop_develop:
 
 10. Finally,
-    `submit a pull request <https://github.com/hotoffthehamster/pep440-version-compare-cli/pulls>`_
+    `submit a pull request
+    <https://github.com/hotoffthehamster/pep440-version-compare-cli/pulls>`_
     through the GitHub website.
 
     *Important:* Please rebase your code against ``develop`` and resolve
