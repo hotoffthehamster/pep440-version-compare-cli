@@ -1,0 +1,9 @@
+# vim:tw=0:ts=2:sw=2:et:norl:ft=dosini
+
+# This file exists within 'pep440-version-compare-cli' aka 'pep440cmp':
+#
+#   https://github.com/hotoffthehamster/pep440-version-compare-cli
+
+[run]
+source=pep440cmp
+

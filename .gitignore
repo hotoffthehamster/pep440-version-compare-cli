@@ -1,0 +1,38 @@
+# This file exists within 'pep440-version-compare-cli' aka 'pep440cmp':
+#
+#   https://github.com/hotoffthehamster/pep440-version-compare-cli
+
+# Building/Packaging/Distributing.
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Byte-compiled/Optimized Python and Library/DLL files.
+*.py[cod]
+__pycache__/
+
+# Testing and CI tasks.
+.pytest_cache/
+.tox
+
+# `make coverage-html` output
+.coverage
+htmlcov/
+
+# pytest-cov / coverage / https://codecov.io
+coverage.xml
+
+# Akin to .gitignore's private .git/info/exclude, this repo includes an
+# .ignore.example file DEV might want to copy as .ignore and customize.
+.ignore
+
+# Optional private DEV Makefile.
+Makefile.local
+
+# Sphinx docs/ (from `make docs`):
+docs/_build/
+
+# Translations
+*.mo
+

@@ -1,0 +1,9 @@
+# This file exists within 'pep440-version-compare-cli' aka 'pep440cmp':
+#
+#   https://github.com/hotoffthehamster/pep440-version-compare-cli
+
+# (lb): Including this file just to be pedantic.
+
+[build-system]
+requires = ["setuptools", "wheel"]
+
