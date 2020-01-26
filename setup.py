@@ -18,7 +18,11 @@ from setuptools import find_packages, setup
 
 # *** Package requirements.
 
-requirements = []
+requirements = [
+    # (lb): Click may be the best optparser of any language I've used.
+    #  https://github.com/pallets/click
+    'click >= 7.0',
+]
 
 # *** Minimal setup() function -- Prefer using config where possible.
 
