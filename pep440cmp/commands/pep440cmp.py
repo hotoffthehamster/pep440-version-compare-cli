@@ -31,9 +31,10 @@ from pkg_resources import parse_version
 
 
 def __compare_versions(versionl, comparison, versionr):
-    """Returns bool from results of PEP 440 version comparison.
+    """Return bool from results of PEP 440 version comparison.
 
-    ... given two version strings and an comparison operator."""
+    ... given two version strings and an comparison operator.
+    """
     # - The code uses ``pkg_resources`` version implementation, which is 440-okay.
     #   I.e., the documentation for ``parse_version`` states::
     #     Parsed a project’s version string as defined by PEP 440.
@@ -61,7 +62,7 @@ def __compare_versions(versionl, comparison, versionr):
 @click.argument('comparison', type=click.Choice(['eq', 'ne', 'lt', 'le', 'ge', 'gt']))
 @click.argument('versionr', nargs=1)
 def test(versionl, comparison, versionr):
-    """Compares versions, then prints 'True' or 'False', and exits 0 or 1.
+    """Compare versions. Prints 'True' or 'False', and exits 0 or 1, based on result.
 
     Specify two versions and an operator. If the statement is correct, the
     command prints 'True' to stdout and exits with a 0. If the statement is not

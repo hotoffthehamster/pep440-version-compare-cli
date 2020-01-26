@@ -48,17 +48,19 @@ __arg0name__ = os.path.basename(sys.argv[0])
 # ***
 
 class ClickCommandlessGroup(click.Group):
+    """Override click.Group to let user run 'test' command implicitly."""
 
     def __init__(self, *args, **kwargs):
+        """Wrap click.Group and keep track of whether current command is implicit."""
         super(ClickCommandlessGroup, self).__init__(*args, **kwargs)
         self.got_test_command = False
 
     def resolve_command(self, ctx, args):
-        """Replaces arg if click.MultiCommand removed because thought was command.
+        """Override parent method to replace arg to complete nameless command hack.
 
-        The click.MultiCommand thinks the first arg is the command,
-        so it removes it, e.g., returns `args[1:]`, which we undo if
-        the user did not specify the command name and we just assumed.
+        Specifically, click.MultiCommand removes the first argument, assuming it's
+        the command name -- but we might have overridden that logic in ``get_command``,
+        in which case we need to undo the argument removal.
         """
         cmd_name, cmd, args_1_onward = super(
             ClickCommandlessGroup, self
@@ -70,10 +72,10 @@ class ClickCommandlessGroup(click.Group):
         return cmd_name, cmd, says_args
 
     def get_command(self, ctx, name):
-        """Returns the default test command if user specifies no command name.
+        """Return the default test command if the user specifies no command name.
 
-        (lb): I'll admit this is kinda hacky, but the broader question is, why am I
-        bothering to use the Click library just to implement one command?
+        That is, if the first argument is a version string, then get_command
+        should return None, and we'll just assume the user wants to 'test'.
         """
         default_cmd = 'test'
         cmd = super(ClickCommandlessGroup, self).get_command(ctx, name)
@@ -86,6 +88,7 @@ class ClickCommandlessGroup(click.Group):
 
 @click.group(cls=ClickCommandlessGroup)
 def cli():
+    """Root Click command group, to which all commands (and sub-groups) are added."""
     pass
 
 
