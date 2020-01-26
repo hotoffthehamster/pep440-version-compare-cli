@@ -19,7 +19,7 @@ To install user-local, simply run::
 To install within a |virtualenv|_, try::
 
     $ mkvirtualenv pep440-version-compare-cli
-    $ pip install pep440-version-compare-cli
+    (pep440-version-compare-cli) $ pip install pep440-version-compare-cli
 
 To develop on the project, link to the source files instead::
 
@@ -28,7 +28,7 @@ To develop on the project, link to the source files instead::
     $ git clone git@github.com:hotoffthehamster/pep440-version-compare-cli.git
     $ cd pep440-version-compare-cli
     $ mkvirtualenv -a $(pwd) --python=/usr/bin/python3.7 pep440-version-compare-cli
-    $ make develop
+    (pep440-version-compare-cli) $ make develop
 
 After creating the virtual environment,
 to start developing from a fresh terminal, run |workon|_::
