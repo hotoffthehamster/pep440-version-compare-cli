@@ -86,10 +86,8 @@ us to improve it.
 This includes the official |user-docs|_,
 the `README
 <https://github.com/hotoffthehamster/pep440-version-compare-cli/blob/develop/README.rst>`__,
-and the inline docstrings that generate the ``API documentation``
-.. FIXME/2020-01-26: Dead until not dead. I need to activate this RTD:
-.. and the inline docstrings that generate the `API documentation
-.. <https://pep440-version-compare-cli.readthedocs.io/en/latest/modules.html>` __
+and the inline docstrings that generate the `API documentation
+<https://pep440-version-compare-cli.readthedocs.io/en/latest/modules.html>`__
 (per |PEP-257|_ and |goog-py-sty|_).
 
 We also appreciate reference from blog posts, articles, and other projects.
