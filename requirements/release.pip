@@ -18,7 +18,6 @@ isort >= 4.3.21
 # - "Easily download, build, install, upgrade, and uninstall Python packages"
 #
 #   https://setuptools.readthedocs.io/en/latest/
-#setuptools >= 38.6.0
 setuptools >= 45.1.0
 
 # - "the blessed package to manage your versions by scm tags"
@@ -34,7 +33,6 @@ tox >= 3.14.3
 # - "Collection of utilities for publishing packages on PyPI"
 #
 #   https://twine.readthedocs.io/en/latest/
-#twine >= 1.11.0
 twine >= 3.1.1
 
 # - "A built-package format for Python."
