@@ -144,6 +144,7 @@ for local development.
 
     $ cd pep440-version-compare-cli/
     $ mkvirtualenv -a $(pwd) pep440-version-compare-cli
+    (pep440-version-compare-cli) $
 
    *Note:* We use the ``-a`` option so that ``cdproject`` changes directories
    to the ``pep440-version-compare-cli/`` directory when we're in the virtual
