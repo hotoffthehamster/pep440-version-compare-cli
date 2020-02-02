@@ -32,21 +32,6 @@ import click
 from pep440cmp import commands
 
 
-# ***
-
-# (lb): These are duplicated in setup.cfg:[metadata], but not sure how to DRY.
-#   Fortunately, they're not likely to change.
-__author__ = 'HotOffThe Hamster'
-__author_email__ = 'hotoffthehamster+pep440cmp@gmail.com'
-#
-# (lb): Not sure if the package name is available at runtime. Seems kinda meta,
-# anyway, like, Who am I? I just want to avoid hard coding this string in docs.
-__package_name__ = 'pep440-version-compare-cli'
-__arg0name__ = os.path.basename(sys.argv[0])
-
-
-# ***
-
 class ClickCommandlessGroup(click.Group):
     """Override click.Group to let user run 'test' command implicitly."""
 
