@@ -73,7 +73,23 @@ class ClickCommandlessGroup(click.Group):
 
 @click.group(cls=ClickCommandlessGroup)
 def cli():
-    """Root Click command group, to which all commands (and sub-groups) are added."""
+    """Compares two versions, prints True or False, and exits 0 or 1.
+
+    \b
+    For example:
+
+    \b
+          $ pep440cmp 1.2.3 lt 1.2.4
+          True
+          $ echo $?
+          0
+
+    \b
+          $ pep440cmp 4.5.6a1 ge 4.5.6
+          False
+          $ echo $?
+          1
+    """
     pass
 
 

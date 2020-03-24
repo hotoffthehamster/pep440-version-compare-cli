@@ -33,9 +33,12 @@ from pkg_resources import parse_version
 @click.command()
 @click.argument('version', nargs=1)
 def is_prerelease(version):
-    """If the passed version string is pre-release, prints 'True' and exits 0.
+    """Check if a version is a pre-release (aka alpha).
 
-    Otherwise, if the version string is pre-release, prints 'False' and exits 1.
+    If the passed version string shows pre-release, prints True and exits 0.
+
+    Otherwise, if the version string looks like a non-alpha, normal
+    release (formatted X.X or X.X.X), prints 'False' and exits 1.
     """
     parsed = parse_version(version)
     result = parsed.is_prerelease
