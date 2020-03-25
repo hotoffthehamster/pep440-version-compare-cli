@@ -29,7 +29,7 @@ import sys
 
 import click
 
-from pep440cmp import commands
+from . import commands
 
 
 class ClickCommandlessGroup(click.Group):
