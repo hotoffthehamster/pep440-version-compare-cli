@@ -21,7 +21,7 @@ from setuptools import find_packages, setup
 requirements = [
     # (lb): Click may be the best optparser of any language I've used.
     #  https://github.com/pallets/click
-    'click >= 7.0',
+    'click >= 7.0, < 8',
 ]
 
 # *** Minimal setup() function -- Prefer using config where possible.
