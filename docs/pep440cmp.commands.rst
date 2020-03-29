@@ -13,8 +13,8 @@ pep440cmp.commands.pep440cmp module
    :show-inheritance:
 
 
-Module contents
----------------
+pep440cmp.commands module contents
+----------------------------------
 
 .. automodule:: pep440cmp.commands
    :members:
