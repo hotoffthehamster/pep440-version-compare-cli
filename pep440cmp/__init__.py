@@ -24,9 +24,6 @@
 
 """Top-level package for this CLI-based application."""
 
-import os
-import sys
-
 import click
 
 from . import commands
