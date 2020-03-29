@@ -69,8 +69,8 @@ class ClickCommandlessGroup(click.Group):
 
 
 @click.group(cls=ClickCommandlessGroup)
-def cli():
-    """Compares two versions, prints True or False, and exits 0 or 1.
+def cli():  # noqa: D301: Use r""" if any backslashes in a docstring
+    """Compare two versions. Prints 'True' or 'False' and exits 0 or 1.
 
     \b
     For example:
