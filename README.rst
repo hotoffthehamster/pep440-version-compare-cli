@@ -23,7 +23,7 @@ pep440-version-compare-cli
   :alt: PyPI Release Status
 
 .. image:: https://img.shields.io/github/license/hotoffthehamster/pep440-version-compare-cli.svg?style=flat
-  :target: https://github.com/hotoffthehamster/pep440-version-compare-cli/blob/develop/LICENSE
+  :target: https://github.com/hotoffthehamster/pep440-version-compare-cli/blob/master/LICENSE
   :alt: License Status
 
 A CLI wrapper around ``pkg_resources`` to compare versions using PEP 440 rules
