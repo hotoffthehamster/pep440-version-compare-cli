@@ -44,8 +44,6 @@ sys.path.insert(0, project_root)
 # ┃                                                                     ┃
 # ┃ YOU/DEV: Customize this import and these strings for your project.  ┃
 
-import pep440cmp
-
 project_dist = 'pep440-version-compare-cli'
 package_name = 'pep440cmp'
 project_ghuser = 'hotoffthehamster'
