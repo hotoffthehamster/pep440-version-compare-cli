@@ -54,7 +54,7 @@ def __compare_versions(versionl, comparison, versionr):
     elif comparison == 'gt':
         return l_vers > r_vers
     else:
-        assert(False)
+        assert False
 
 
 @click.command()
