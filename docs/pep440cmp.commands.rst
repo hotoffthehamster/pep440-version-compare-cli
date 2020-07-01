@@ -4,6 +4,14 @@ pep440cmp.commands package
 Submodules
 ----------
 
+pep440cmp.commands.is\_prerelease module
+----------------------------------------
+
+.. automodule:: pep440cmp.commands.is_prerelease
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 pep440cmp.commands.pep440cmp module
 -----------------------------------
 
@@ -13,8 +21,8 @@ pep440cmp.commands.pep440cmp module
    :show-inheritance:
 
 
-pep440cmp.commands module contents
-----------------------------------
+Module contents
+---------------
 
 .. automodule:: pep440cmp.commands
    :members:
