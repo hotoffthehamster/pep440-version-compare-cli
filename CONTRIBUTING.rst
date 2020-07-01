@@ -170,13 +170,16 @@ for local development.
     $
 
 4. Before starting work on a new feature or bug fix, make sure your
-   ``develop`` branch is up to date with the official branch::
+   local branch is up to date with the upstream branch. Assuming the
+   upstream branch is named ``release`` and you've named the upstream
+   remote ``upstream``, and your user's remote is named ``origin``, you
+   might run::
 
     (pep440-version-compare-cli) $ cdproject
     (pep440-version-compare-cli) $ git remote add upstream git@github.com:hotoffthehamster/pep440-version-compare-cli.git
     (pep440-version-compare-cli) $ git fetch upstream
-    (pep440-version-compare-cli) $ git checkout develop
-    (pep440-version-compare-cli) $ git rebase upstream/develop
+    (pep440-version-compare-cli) $ git checkout release
+    (pep440-version-compare-cli) $ git rebase upstream/release
     (pep440-version-compare-cli) $ git push origin HEAD
 
 5. Create a branch for local development. If you are working on an known issue,
@@ -339,20 +342,20 @@ for local development.
 
     $ git push origin feature/ISSUE-123-name-of-your-issue --force
 
-   .. _rebase_atop_develop:
+   .. _rebase_atop_release:
 
 10. Finally,
     `submit a pull request
     <https://github.com/hotoffthehamster/pep440-version-compare-cli/pulls>`_
     through the GitHub website.
 
-    *Important:* Please rebase your code against ``develop`` and resolve
-    merge conflicts, so that the main project maintainer does not have
-    to do so themselves. E.g.,::
+    *Important:* Please rebase your code against the ``release`` branch
+    and resolve merge conflicts, so that the main project maintainer does
+    not have to do so themselves. E.g.,::
 
      $ git checkout feature/ISSUE-123-name-of-your-issue
      $ git fetch upstream
-     $ git rebase upstream/develop
+     $ git rebase upstream/release
      # Resolve any conflicts, then force-push.
      $ git push origin HEAD --force
      # And then open the Pull Request.
@@ -392,11 +395,11 @@ Before you submit a pull request, check that it meets these guidelines:
 
      __ rebase_and_squash_
 
-   * Rebase your work atop develop (as `mentioned above`__)
-     before creating the PR, or after making any requested
-     changes.
+   * Rebase your work atop the upstream ``release`` branch (as
+     `mentioned above`__) before creating the PR, or after making
+     any requested changes.
 
-     __ rebase_atop_develop_
+     __ rebase_atop_release_
 
 4. Run ``make test-all``.
 
